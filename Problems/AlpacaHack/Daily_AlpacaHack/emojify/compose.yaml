@@ -1,0 +1,23 @@
+services:
+  frontend:
+    build:
+      dockerfile: ../Dockerfile
+      context: ./frontend
+    restart: unless-stopped
+    init: true
+    ports:
+      - ${PORT:-3000}:3000
+  backend:
+    build:
+      dockerfile: ../Dockerfile
+      context: ./backend
+    restart: unless-stopped
+    init: true
+  secret:
+    build:
+      dockerfile: ../Dockerfile
+      context: ./secret
+    restart: unless-stopped
+    init: true
+    environment:
+      - FLAG=Alpaca{REDACTED}

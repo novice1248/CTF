@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <main>
+      <h1>Emojify</h1>
+      <form action="/" method="get">
+        <input type="text" name="text" placeholder="pizza" required />
+        <button type="submit">Show</button>
+      </form>
+      <div id="result" style="font-size: 24em; text-align: center"></div>
+    </main>
+    <script>
+      document.forms[0].onsubmit = (event) => {
+        event.preventDefault();
+
+        const text = event.target.text.value;
+        fetch("/api?path=/emoji/" + encodeURIComponent(text))
+          .then((r) => r.text())
+          .then((emoji) => (result.textContent = emoji));
+      };
+    </script>
+  </body>
+</html>
