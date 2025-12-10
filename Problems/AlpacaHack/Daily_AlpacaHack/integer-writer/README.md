@@ -1,3 +1,5 @@
+2025-12-05
+
 https://alpacahack.com/daily/challenges/integer-writer
 
 ##Pwn

@@ -1,3 +1,5 @@
+2025-12-06
+
 https://alpacahack.com/daily/challenges/simpleoverflow
 
 ##Pwn

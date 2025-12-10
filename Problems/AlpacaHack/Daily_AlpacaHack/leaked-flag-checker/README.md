@@ -1,3 +1,5 @@
+2025-12-04
+
 https://alpacahack.com/daily/challenges/leaked-flag-checker
 
 ##Rev
