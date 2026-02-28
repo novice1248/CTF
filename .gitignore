@@ -1,26 +1,32 @@
-# macOS
-.DS_Store
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-venv/
-.venv/
-env/
-
-# Node.js
-node_modules/
-npm-debug.log
-yarn-error.log
-
-# C/C++
+# バイナリ・大容量ファイル
 *.o
-*.out
-*.dSYM/
+*.so
+*.elf
+*.dmp
+*.bin
+*.cap
+*.pcap
+*.pcapng
+*.db
 
-# CTF specific (optional, depending on preference)
-# flag.txt
+# 一時ファイル
+*.pyc
+__pycache__/
+.gdb_history
 
-# VS Code
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+
+# エディタ
 .vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ローカルのflag.txt (テスト用)
+flag_local.txt
