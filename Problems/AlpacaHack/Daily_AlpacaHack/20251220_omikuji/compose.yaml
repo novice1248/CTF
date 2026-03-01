@@ -1,0 +1,11 @@
+services:
+  app:
+    init: true
+    build: ./app
+    restart: unless-stopped
+  nginx:
+    init: true
+    build: ./nginx
+    restart: unless-stopped
+    ports:
+      - ${PORT:-3456}:80
